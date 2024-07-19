@@ -1,0 +1,21 @@
+name: Setup
+description: 'Setup action for Laravel'
+
+runs:
+  uses: "composite"
+
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.3
+        extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, intl, iconv, ldap, gd
+        coverage: none
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '>=21.0'
