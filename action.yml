@@ -2,7 +2,7 @@ name: Setup
 description: 'Setup action for Laravel'
 
 runs:
-  uses: "composite"
+  using: "composite"
 
   steps:
     - name: Checkout
